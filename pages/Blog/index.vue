@@ -134,16 +134,16 @@ useSeoMeta({
         >
           <p>還沒有與{{ searchQuery }}相關的文章</p>
         </div>
-        <div
+        <ul
           v-else="filteredArticles"
           class="grid md:gap-3 lg:gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          <ul
+          <li
             v-for="article in filteredArticles"
             :key="article.id"
             class="blog-item"
           >
-            <li class="blog-item-content py-10">
+            <div class="blog-item-content py-10">
               <picture class="blog-item-img w-full">
                 <source
                   media="(min-width:768px)"
@@ -179,9 +179,9 @@ useSeoMeta({
               >
                 閱讀內文
               </NuxtLink>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
       <nav aria-label="Page navigation" class="grid place-items-center">
         <ul
