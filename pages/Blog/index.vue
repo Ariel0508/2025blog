@@ -38,7 +38,7 @@ useSeoMeta({
   ogTitle: '部落格總覽 - 個人品牌網站',
   ogDescription: '在這裡找到所有精彩的文章內容，從 Nuxt 3 到日常開發經驗分享。',
   ogType: 'website',
-})
+});
 </script>
 
 <template>
@@ -138,12 +138,12 @@ useSeoMeta({
           v-else="filteredArticles"
           class="grid md:gap-3 lg:gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          <div
+          <ul
             v-for="article in filteredArticles"
             :key="article.id"
             class="blog-item"
           >
-            <div class="blog-item-content py-10">
+            <li class="blog-item-content py-10">
               <picture class="blog-item-img w-full">
                 <source
                   media="(min-width:768px)"
@@ -179,8 +179,8 @@ useSeoMeta({
               >
                 閱讀內文
               </NuxtLink>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
       <nav aria-label="Page navigation" class="grid place-items-center">

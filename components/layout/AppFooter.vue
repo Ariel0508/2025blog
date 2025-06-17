@@ -7,7 +7,7 @@ const isHomePage = computed(() => route.path === "/");
     <div class="container mx-auto px-3 max-w-[1320px]">
       <div v-if="!isHomePage" class="contact hidden py-20 md:block">
         <div class="flex flex-row items-center justify-between">
-            <p class="email font-medium text-[32px]">alysewanghexschool.com</p>
+            <a href="mailto:alysewanghexschool.com" class="email font-medium text-[32px]">alysewanghexschool.com</a>
             <div
               class="social flex flex-row items-center justify-between gap-1"
             >
